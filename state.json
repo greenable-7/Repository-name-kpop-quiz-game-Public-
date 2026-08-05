@@ -2,27 +2,52 @@
   "quizzes": [
     {
       "question": "BTS의 팬덤 이름은 무엇일까요?",
-      "choices": ["BLINK", "ARMY", "ONCE", "CARAT"],
+      "choices": [
+        "BLINK",
+        "ARMY",
+        "ONCE",
+        "CARAT"
+      ],
       "answer": 2
     },
     {
       "question": "BLACKPINK의 멤버가 아닌 사람은 누구일까요?",
-      "choices": ["지수", "제니", "로제", "윈터"],
+      "choices": [
+        "지수",
+        "제니",
+        "로제",
+        "윈터"
+      ],
       "answer": 4
     },
     {
       "question": "아이브(IVE)의 대표곡으로 알려진 곡은 무엇일까요?",
-      "choices": ["LOVE DIVE", "Dynamite", "God's Menu", "Very Nice"],
+      "choices": [
+        "LOVE DIVE",
+        "Dynamite",
+        "God's Menu",
+        "Very Nice"
+      ],
       "answer": 1
     },
     {
       "question": "세븐틴의 멤버 수는 몇 명일까요?",
-      "choices": ["7명", "9명", "11명", "13명"],
+      "choices": [
+        "7명",
+        "9명",
+        "11명",
+        "13명"
+      ],
       "answer": 4
     },
     {
       "question": "트와이스의 팬덤 이름은 무엇일까요?",
-      "choices": ["MOA", "ONCE", "MIDZY", "FEARNOT"],
+      "choices": [
+        "MOA",
+        "ONCE",
+        "MIDZY",
+        "FEARNOT"
+      ],
       "answer": 2
     }
   ],
