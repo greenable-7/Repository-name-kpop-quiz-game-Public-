@@ -55,4 +55,4 @@ kpop-quiz-game/
   "best_score": 80
 }
 ```
-
+- Git clone과 pull 실습을 완료했습니다.
