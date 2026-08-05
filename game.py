@@ -65,3 +65,52 @@ class QuizGame:
         print("4. 점수 확인")
         print("5. 종료")
         print("=" * 40)
+
+    def read_number(self, prompt, minimum, maximum):
+        """빈 값, 문자, 범위 밖 값을 안내하며 정수 입력을 받는다."""
+        while True:
+            try:
+                value = input(prompt).strip()
+            except EOFError:
+                raise
+            if not value:
+                print(f"⚠️ 입력이 비어 있습니다. {minimum}-{maximum} 사이의 숫자를 입력하세요.")
+                continue
+            try:
+                number = int(value)
+            except ValueError:
+                print(f"⚠️ 잘못된 입력입니다. {minimum}-{maximum} 사이의 숫자를 입력하세요.")
+                continue
+            if not minimum <= number <= maximum:
+                print(f"⚠️ 잘못된 입력입니다. {minimum}-{maximum} 사이의 숫자를 입력하세요.")
+                continue
+            return number
+
+    def play_quiz(self):
+        """모든 퀴즈를 출제하고 이번 점수와 최고 점수를 갱신한다."""
+        if not self.quizzes:
+            print("📭 등록된 퀴즈가 없습니다. 먼저 퀴즈를 추가해 주세요.")
+            return
+
+        correct_count = 0
+        print(f"\n📝 퀴즈를 시작합니다! (총 {len(self.quizzes)}문제)")
+        for number, quiz in enumerate(self.quizzes, start=1):
+            print("\n" + "-" * 40)
+            quiz.display(number)
+            selected_answer = self.read_number("정답 입력 (1-4): ", 1, 4)
+            if quiz.is_correct(selected_answer):
+                correct_count += 1
+                print("✅ 정답입니다!")
+            else:
+                print(f"❌ 오답입니다. 정답은 {quiz.answer}번입니다.")
+
+        score = round(correct_count / len(self.quizzes) * 100)
+        print("\n" + "=" * 40)
+        print(f"🏆 결과: {len(self.quizzes)}문제 중 {correct_count}문제 정답! ({score}점)")
+        if self.best_score is None or score > self.best_score:
+            self.best_score = score
+            self.save_state()
+            print("🎉 새로운 최고 점수입니다!")
+        else:
+            print(f"현재 최고 점수는 {self.best_score}점입니다.")
+        print("=" * 40)
