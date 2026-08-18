@@ -7,6 +7,7 @@ class Quiz:
     def __init__(self, question, choices, answer):
         if len(choices) != 4:
             raise ValueError("선택지는 정확히 4개여야 합니다.")
+
         if answer not in range(1, 5):
             raise ValueError("정답 번호는 1~4 사이여야 합니다.")
 
@@ -18,7 +19,9 @@ class Quiz:
         """퀴즈 문제와 선택지를 화면에 출력한다."""
         if number is not None:
             print(f"\n[문제 {number}]")
+
         print(self.question)
+
         for index, choice in enumerate(self.choices, start=1):
             print(f"{index}. {choice}")
 
@@ -37,4 +40,8 @@ class Quiz:
     @classmethod
     def from_dict(cls, data):
         """저장된 딕셔너리에서 Quiz 객체를 생성한다."""
-        return cls(data["question"], data["choices"], data["answer"])
+        return cls(
+            data["question"],
+            data["choices"],
+            data["answer"],
+        )

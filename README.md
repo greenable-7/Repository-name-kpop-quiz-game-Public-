@@ -35,17 +35,29 @@ K-pop은 BTS, BLACKPINK, IVE, SEVENTEEN, TWICE 등 익숙한 아티스트를 바
 
 ## 3. 개발 환경
 
-- Python 3.10 이상
-- 외부 라이브러리 사용 없음
+이 프로젝트는 다음 환경에서 개발하고 실행했습니다.
+
+- Python 3.12.13
+- Git 2.53.0
+- Visual Studio Code 1.112.0
+- Python 외부 라이브러리 사용 없음
 - Python 표준 라이브러리 사용
   - `json`
   - `pathlib`
 
-Python 버전은 다음 명령어로 확인할 수 있습니다.
+개발 환경의 버전은 터미널에서 다음 명령어로 확인했습니다.
 
 ```bash
 python3 --version
+git --version
+code --version
 ```
+
+### 개발 환경 확인 화면
+
+아래 화면에서 Python, Git, Visual Studio Code의 설치 및 버전을 확인할 수 있습니다.
+
+![개발 환경 확인](screenshots/개발환경.png)
 
 ---
 
@@ -192,6 +204,9 @@ Repository-name-kpop-quiz-game-Public-/
 └── screenshots/
     # 프로그램 실행 결과와 Git 실습 내용을 증빙하기 위한 이미지 폴더
 
+    ├── 개발환경.png
+    │   # Python, Git, Visual Studio Code 버전 확인 화면
+    │
     ├── 퀴즈풀기1.png
     │   # 퀴즈 풀기 실행 화면 1
     │

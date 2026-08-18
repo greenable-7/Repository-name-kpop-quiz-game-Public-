@@ -49,17 +49,7 @@
         "FEARNOT"
       ],
       "answer": 2
-    },
-    {
-      "question": "dkdldl",
-      "choices": [
-        "3",
-        "3",
-        "4",
-        "d"
-      ],
-      "answer": 3
     }
   ],
-  "best_score": 33
+  "best_score": null
 }
